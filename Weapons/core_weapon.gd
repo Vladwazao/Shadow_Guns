@@ -14,6 +14,7 @@ var _position : Vector2 = Vector2()
 func _ready() -> void:
 	rate_timer.wait_time = attack_rate
 	print("Heloo KatyaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+	print("Test of merge")
 
 func _process(delta: float) -> void:
 	_rotate_to_target(_position, delta)
