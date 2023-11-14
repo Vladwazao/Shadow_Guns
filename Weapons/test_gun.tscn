@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://col8s5q6fy70h"]
+
+[ext_resource type="Texture2D" uid="uid://5okp70yxkfch" path="res://Assets/Art/Weapons/Test_Gun.png" id="1_ipia6"]
+[ext_resource type="Script" path="res://Weapons/core_weapon.gd" id="2_k22kn"]
+[ext_resource type="PackedScene" uid="uid://b0l5sh41aatef" path="res://Bullets/gun_bullet.tscn" id="3_fh73v"]
+
+[node name="TestGun" type="Sprite2D" node_paths=PackedStringArray("rate_timer")]
+texture = ExtResource("1_ipia6")
+script = ExtResource("2_k22kn")
+bullet = ExtResource("3_fh73v")
+rate_timer = NodePath("RateTimer")
+
+[node name="RateTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="RateTimer" to="." method="_on_timer_timeout"]

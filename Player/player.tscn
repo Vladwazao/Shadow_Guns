@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyjdb4bvoxtin"]
+
+[ext_resource type="Texture2D" uid="uid://chy5ousqk043w" path="res://Assets/Art/Player/Shadow_Default_Idle.png" id="1_mph53"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnwk4"]
+atlas = ExtResource("1_mph53")
+region = Rect2(0, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgy1l"]
+atlas = ExtResource("1_mph53")
+region = Rect2(14, 0, 14, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6pbm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnwk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgy1l")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76gbd"]
+size = Vector2(8, 16)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g6pbm")
+animation = &"idle"
+frame_progress = 0.570168
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2)
+shape = SubResource("RectangleShape2D_76gbd")
