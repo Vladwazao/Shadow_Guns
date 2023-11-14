@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://duuccewf31uj8"]
+
+[ext_resource type="Texture2D" uid="uid://2d8vxyquust0" path="res://Assets/Art/UI/Movement_Button.png" id="1_tg08a"]
+
+[node name="PlayerMovementUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RightMovementButton" type="TouchScreenButton" parent="."]
+position = Vector2(331, 151)
+texture_normal = ExtResource("1_tg08a")
+texture_pressed = ExtResource("1_tg08a")
+passby_press = true
+action = "right"
+
+[node name="LeftMovementButton" type="TouchScreenButton" parent="."]
+position = Vector2(305, 178)
+scale = Vector2(-1, -1)
+texture_normal = ExtResource("1_tg08a")
+texture_pressed = ExtResource("1_tg08a")
+passby_press = true
+action = "left"
+
+[node name="JumpMovementButton" type="TouchScreenButton" parent="."]
+position = Vector2(305, 147)
+rotation = -1.5708
+texture_normal = ExtResource("1_tg08a")
+texture_pressed = ExtResource("1_tg08a")
+passby_press = true
+action = "jump"

@@ -1,7 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd2acwlqtroyw"]
+[gd_scene load_steps=5 format=3 uid="uid://bd2acwlqtroyw"]
 
 [ext_resource type="PackedScene" uid="uid://dyjdb4bvoxtin" path="res://Player/player.tscn" id="1_480hj"]
+[ext_resource type="Script" path="res://Player/player.gd" id="2_i6b3t"]
+[ext_resource type="PackedScene" uid="uid://c7iiwkvhbcqve" path="res://Enviroment/floor.tscn" id="3_31i0l"]
+[ext_resource type="PackedScene" uid="uid://duuccewf31uj8" path="res://UI/player_movement_ui.tscn" id="4_vviuy"]
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_480hj")]
+position = Vector2(61, 94)
+script = ExtResource("2_i6b3t")
+
+[node name="Floor" parent="." instance=ExtResource("3_31i0l")]
+
+[node name="LvlUI" type="CanvasLayer" parent="."]
+
+[node name="PlayerMovementUI" parent="LvlUI" instance=ExtResource("4_vviuy")]

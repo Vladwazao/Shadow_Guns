@@ -24,6 +24,21 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Shadow_Guns"
 
+[input]
+
+right={
+"deadzone": 0.5,
+"events": []
+}
+left={
+"deadzone": 0.5,
+"events": []
+}
+jump={
+"deadzone": 0.5,
+"events": []
+}
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true

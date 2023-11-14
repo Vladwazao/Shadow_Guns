@@ -1,2 +1,5 @@
 res://Weapons/test_gun.tscn
 res://Weapons/core_weapon.gd
+res://world.tscn
+res://Player/player.gd
+res://UI/player_movement_ui.tscn
